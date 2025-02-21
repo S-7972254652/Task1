@@ -1,0 +1,183 @@
+/* Reset and general styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f6f6f6;
+    padding: 20px;
+    color: #333;
+  }
+  
+  /* Container */
+  .bogo-container {
+    max-width: 400px;
+    margin: 0 auto;
+    background: #fff;
+    border-radius: 8px;
+    padding: 20px;
+  }
+  
+  /* Header */
+  .bogo-container h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 24.2px;
+    color: #FF6B82;
+    font-family: Inter;
+  }
+  
+  /* Offer Options Container */
+  .offer-options {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  /* Offer Card */
+  .offer-card {
+    border: 2px solid #e8e8e8;
+    border-radius: 8px;
+    transition: border 0.3s ease;
+    overflow: hidden;
+    cursor: pointer;
+  }
+  
+  /* When hovered */
+  .offer-card:hover {
+    border-color: #ff3399;
+  }
+  
+  /* Card Header (always visible) */
+  .card-header {
+    padding: 10px;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+  }
+  
+  /* Show radio buttons - removed display: none */
+  .offer-card input[type="radio"] {
+    margin-right: 10px;
+  }
+  
+  /* The label inside the header to display the main info */
+  .card-label {
+    display: block;
+    width: 100%;
+  }
+  
+  /* Offer Header (title, badges) */
+  .offer-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 6px;
+  }
+  
+  .unit-count {
+    font-weight: bold;
+    font-size: 14px ;
+  }
+  
+  /* Discount & Popular Badges */
+  .badge {
+    font-size: 0.75rem;
+    color: #fff;
+    padding: 2px 6px;
+    border-radius: 4px;
+    text-transform: uppercase;
+  }
+  
+  .discount-badge {
+    background-color: #ff3399;
+  }
+  
+  .popular-badge {
+    background-color: #ffa500;
+  }
+  
+  /* Price line */
+  .price-line {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+  }
+  
+  .current-price {
+    font-weight: bold;
+    font-size: 14.46px;
+    color: #000;
+}
+  
+.original-price {
+    font-size: 13px;
+    color: #999;
+    text-decoration: line-through;
+}
+  
+  /* Card Content (expand/collapse area) */
+  .card-content {
+    padding: 0 10px 10px;
+    display: none; /* Hidden by default */
+  }
+  
+  /* Sub-options (Size, Color) */
+  .sub-options {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  
+  .sub-options label {
+    display: flex;
+    flex-direction: column;
+    font-size: 0.9rem;
+    gap: 4px;
+  }
+  
+  /* Show card content when .active class is present */
+  .offer-card.active .card-content {
+    display: block;
+  }
+  
+  /* Free Delivery text */
+  .free-delivery {
+    font-size: 1rem;
+    margin: 16px 0;
+    text-align: center;
+    font-weight: bold;
+    color: green;
+  }
+  
+  /* Total & Add to Cart Button */
+  .total-and-cart {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  #add-to-cart-btn {
+    background-color: #ff3399;
+    color: #fff;
+    padding: 10px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+  }
+  
+  #add-to-cart-btn:hover {
+    background-color: #e02682;
+  }
+  
+  #total-price {
+    font-size: 1.1rem;
+    color: #333;
+  }
+ 

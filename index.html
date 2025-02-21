@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BOGO Offer</title>
+    <link rel="stylesheet" href="Style.css" />
+</head>
+
+<body>
+    <div class="bogo-container">
+        <h1>YAY! It’s BOGO</h1>
+
+        <div class="offer-options">
+
+            <!-- 1 Unit Card -->
+            <div class="offer-card" data-discount="10" data-price="10">
+                <div class="card-header">
+                    <input type="radio" name="unitOption" value="1" id="option1" />
+                    <label for="option1" class="card-label">
+                        <div class="offer-header">
+                            <span class="unit-count">1 Unit</span>
+                            <span class="badge discount-badge">10% Off</span>
+                            <span class="current-price" style="padding-left: 80px;">$10.00 USD</span>
+                        </div>
+                        <div class="price-line">
+                            <span style="font-size: 12px;">Standard Price</span>
+                            <span class="original-price" style="padding-left: 110px;">$24.00 USD</span>
+                        </div>
+                    </label>
+                </div>
+                <!-- Expandable Content -->
+                <div class="card-content">
+                    <div class="sub-options">
+                        <label>
+                            Size
+                            <select name="size">
+                                <option value="S">S</option>
+                                <option value="M">M</option>
+                                <option value="L">L</option>
+                            </select>
+                        </label>
+                        <label>
+                            Colour
+                            <select name="color">
+                                <option value="black">Black</option>
+                                <option value="white">White</option>
+                                <option value="pink">Pink</option>
+                            </select>
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 2 Unit Card -->
+            <div class="offer-card most-popular" data-discount="20" data-price="18">
+                <div class="card-header">
+                    <input type="radio" name="unitOption" value="2" id="option2" />
+                    <label for="option2" class="card-label">
+                        <div class="offer-header">
+                            <span class="unit-count">2 Unit</span>
+                            <span class="badge discount-badge">20% Off</span>
+                            <span class="current-price" style="padding-left: 80px;">$18.00 USD</span>
+                        </div>
+                        <div class="price-line">
+                            <span class="original-price" style="padding-left: 200px;">$24.00 USD</span>
+                        </div>
+                    </label>
+                </div>
+                <!-- Expandable Content -->
+                <div class="card-content">
+                    <div class="sub-options">
+                        <label>
+                            Size
+                            <select name="size">
+                                <option value="S">S</option>
+                                <option value="M">M</option>
+                                <option value="L">L</option>
+                            </select>
+                        </label>
+                        <label>
+                            Colour
+                            <select name="color">
+                                <option value="black">Black</option>
+                                <option value="white">White</option>
+                                <option value="pink">Pink</option>
+                            </select>
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 3 Unit Card -->
+            <div class="offer-card" data-discount="30" data-price="24">
+                <div class="card-header">
+                    <input type="radio" name="unitOption" value="3" id="option3" />
+                    <label for="option3" class="card-label">
+                        <div class="offer-header">
+                            <span class="unit-count">3 Unit</span>
+                            <span class="badge discount-badge">30% Off</span>
+                            <span class="current-price" style=" padding-left: 80px;">$24.00 USD</span>
+                        </div>
+                        <div class="price-line">
+                            <span class="original-price" style=" padding-left: 200px;">$30.00 USD</span>
+                        </div>
+                    </label>
+                </div>
+                <!-- Expandable Content -->
+                <div class="card-content">
+                    <div class="sub-options">
+                        <label>
+                            Size
+                            <select name="size">
+                                <option value="S">S</option>
+                                <option value="M">M</option>
+                                <option value="L">L</option>
+                            </select>
+                        </label>
+                        <label>
+                            Colour
+                            <select name="color">
+                                <option value="black">Black</option>
+                                <option value="white">White</option>
+                                <option value="pink">Pink</option>
+                            </select>
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- .offer-options -->
+
+        <p class="free-delivery">Free Delivery</p>
+
+        <div class="total-and-cart">
+            <span>Total : <strong id="total-price">$0.00 USD</strong></span>
+            <button id="add-to-cart-btn">Add to Cart</button>
+        </div>
+    </div><!-- .bogo-container -->
+
+    <script>
+        const offerCards = document.querySelectorAll('.offer-card');
+        const totalPriceEl = document.getElementById('total-price');
+        offerCards.forEach(card => {
+            const radio = card.querySelector('input[type="radio"]');
+            radio.addEventListener('change', () => {
+                offerCards.forEach(c => c.classList.remove('active'));
+                card.classList.add('active');
+                const price = card.getAttribute('data-price');
+                totalPriceEl.textContent = `$${price}.00 USD`;
+            });
+        });
+    </script>
+</body>
+
+</html>
